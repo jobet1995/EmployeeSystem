@@ -1,0 +1,41 @@
+version: "3.8"
+
+services:
+  vuejs:
+    build:
+      context: .
+      dockerfile: Dockerfile.vuejs
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./vuejs/src:/app/src
+
+  robotframework:
+    build:
+      context: .
+      dockerfile: Dockerfile.robotframework
+    depends_on:
+      - vuejs
+    volumes:
+      - ./robotframework/tests:/app/tests
+    environment:
+      - VUE_APP_BASE_URL=http://vuejs:8080
+
+  selenium-hub:
+    image: selenium/hub:4.1.0
+    ports:
+      - "4444:4444"
+
+  chrome-node:
+    image: selenium/node-chrome:4.1.0
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+    volumes:
+      - /dev/shm:/dev/shm
+
+networks:
+  default:
+    external:
+      name: bridge
