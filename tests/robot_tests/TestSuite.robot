@@ -1,6 +1,6 @@
 *** Settings ***
-Resource    ./locators.robot
-Resource    ./keywords.robot
+Resource    ./Locators.robot
+Resource    ./Keywords.robot
 Suite Setup    Open Browser To Login Page
 Suite Teardown    Close Browser
 

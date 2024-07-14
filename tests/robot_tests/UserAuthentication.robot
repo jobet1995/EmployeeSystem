@@ -1,6 +1,6 @@
 *** Settings ***
-Resource    ../resources/locators.robot
-Resource    ../resources/keywords.robot
+Resource    ./Locators.robot
+Resource    ./Keywords.robot
 
 *** Test Cases ***
 Login With Valid Credentials
