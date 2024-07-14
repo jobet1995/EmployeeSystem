@@ -1,0 +1,28 @@
+minimum_cumulusci_version: "3.89.0"
+project:
+  name: EmployeeSystem
+  package:
+    name: EmployeeSystem
+    namespace: y
+    api_version: "61.0"
+  git:
+    default_branch: "main"
+  test:
+    name_match: "test"
+  source_format: sfdx
+
+tasks:
+  robot:
+    options:
+      suites: robot/EmployeeSystem/tests
+      options:
+        outputdir: robot/EmployeeSystem/results
+
+  robot_testdoc:
+    options:
+      path: robot/EmployeeSystem/tests
+      output: robot/EmployeeSystem/doc/EmployeeSystem_tests.html
+
+  run_tests:
+    options:
+      required_org_code_coverage_percent: 75
