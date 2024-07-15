@@ -2,14 +2,11 @@ FROM node:14 AS build-stage
 
 WORKDIR /app
 
-
 COPY package*.json ./
 RUN echo "Installing npm dependencies..." \
     && npm install
 
-
 COPY . .
-
 
 RUN echo "Building Vue.js application..." \
     && npm run build
