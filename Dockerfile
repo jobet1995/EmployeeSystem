@@ -1,4 +1,4 @@
-FROM node:14 AS build-stage
+FROM node:16 AS build-stage
 
 WORKDIR /app
 
@@ -14,7 +14,6 @@ RUN echo "Building Vue.js application..." \
 FROM python:3.9-slim AS robot-framework
 
 WORKDIR /app
-
 
 RUN echo "Installing system dependencies..." \
     && apt-get update \
