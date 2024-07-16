@@ -6,7 +6,8 @@
     "build": "vite build",
     "preview": "vite preview --port 4173",
     "prepare": "husky",
-    "prettier": "prettier --write \"**/*.{js,vue,json,md}\""
+    "prettier": "prettier --write \"**/*.{js,vue,json,md}\"",
+    "lint": "eslint \"**/*.{js,vue,json,md}\""
   },
   "dependencies": {
     "vue": "^3.3.4",
@@ -14,9 +15,14 @@
     "vuex": "^4.1.0"
   },
   "devDependencies": {
+    "@eslint/compat": "^1.1.1",
+    "@eslint/js": "^8.0.0",
     "@vitejs/plugin-vue": "^4.2.3",
+    "eslint": "^8.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.34.4",
+    "globals": "^15.8.0",
     "husky": "^9.0.11",
     "jsdoc": "^4.0.3",
     "lint-staged": "^15.2.7",
