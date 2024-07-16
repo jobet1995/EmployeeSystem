@@ -114,7 +114,7 @@ jobs:
     - name: Install dependencies
       run: |
         echo "Installing project dependencies..."
-        npm ci
+        npm install
         echo "Dependencies installed"
 
     - name: Build the project
