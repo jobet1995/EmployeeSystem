@@ -21,7 +21,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16'  # Ensure Node.js version 15 or higher
+        node-version: '16'
       run: echo "Node.js setup complete"
 
     - name: Install dependencies
@@ -46,13 +46,13 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16'  # Ensure Node.js version 15 or higher
+        node-version: '16'
       run: echo "Node.js setup complete"
 
     - name: Install dependencies
       run: |
         echo "Installing project dependencies..."
-        npm install
+        npm ci
         echo "Dependencies installed"
 
     - name: Run linters
@@ -77,7 +77,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16'  # Ensure Node.js version 15 or higher
+        node-version: '16'
       run: echo "Node.js setup complete"
 
     - name: Install dependencies
@@ -108,13 +108,13 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16'  # Ensure Node.js version 15 or higher
+        node-version: '16'
       run: echo "Node.js setup complete"
 
     - name: Install dependencies
       run: |
         echo "Installing project dependencies..."
-        npm install
+        npm ci
         echo "Dependencies installed"
 
     - name: Build the project
@@ -181,7 +181,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16'  # Ensure Node.js version 15 or higher
+        node-version: '16'
       run: echo "Node.js setup complete"
 
     - name: Install dependencies
